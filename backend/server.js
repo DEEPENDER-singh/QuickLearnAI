@@ -109,7 +109,7 @@ app.post("/api/register", async (req, res) => {
     }
 
     // Step 3: Local JSON database handling functions
-    
+
     const db = readDb();
     const existingStudent = db.students.find((student) => student.email === email);
 
@@ -149,6 +149,8 @@ app.post("/api/register", async (req, res) => {
     res.status(500).json({ message: "Registration failed", error: error.message });
   }
 });
+
+// Step 4: User authentication APIs (register & login)
 
 app.post("/api/login", async (req, res) => {
   try {
