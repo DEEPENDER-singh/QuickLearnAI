@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickLearn AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+    </div>
+
+    <header class="site-header">
+      <nav class="navbar">
+        <button class="brand nav-link" data-page="home">QuickLearn AI</button>
+        <button class="menu-toggle" id="menuToggle">Menu</button>
+        <div class="nav-menu" id="navMenu">
+          <button class="nav-link" data-page="home">Home</button>
+          <button class="nav-link" data-page="courses">Courses</button>
+          <button class="nav-link" data-page="dashboard">Dashboard</button>
+          <button class="nav-link" data-page="login">Login</button>
+          <button class="nav-link register-link" data-page="register">Register</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="page active hero">
+        <div class="hero-content">
+          <p class="eyebrow">Personalized programming learning</p>
+          <h1>QuickLearn AI</h1>
+          <p>
+            Take a skill test, discover your weak topics, and get a learning
+            path that matches your current level.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn" data-page="register">Start Learning</button>
+            <button class="secondary-btn" data-page="courses">View Courses</button>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="mini-card">
+            <span>Assessment</span>
+            <strong>10 MCQs</strong>
+          </div>
+          <div class="mini-card">
+            <span>Timer</span>
+            <strong>15 min</strong>
+          </div>
+          <div class="mini-card">
+            <span>AI Path</span>
+            <strong>Custom</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="register" class="page section-wrap">
+        <div class="section-title">
+          <p class="eyebrow">Student Registration</p>
+          <h2>Create your student account</h2>
+        </div>
+        <form id="registerForm" class="form-card">
+          <label>Name <input type="text" id="regName" required /></label>
+          <label>Email <input type="email" id="regEmail" required /></label>
+          <label>Password <input type="password" id="regPassword" required /></label>
+          <label>College Name <input type="text" id="regCollege" required /></label>
+          <label>Semester <input type="text" id="regSemester" required /></label>
+          <button class="primary-btn" type="submit">Register</button>
+        </form>
+      </section>
+
+      <section id="login" class="page section-wrap">
+        <div class="section-title">
+          <p class="eyebrow">Student Login</p>
+          <h2>Continue learning</h2>
+        </div>
+        <form id="loginForm" class="form-card">
+          <label>Email <input type="email" id="loginEmail" required /></label>
+          <label>Password <input type="password" id="loginPassword" required /></label>
+          <button class="primary-btn" type="submit">Login</button>
+        </form>
+      </section>
+
+      <section id="courses" class="page section-wrap">
+        <div class="section-title">
+          <p class="eyebrow">Course Selection</p>
+          <h2>Choose one programming course</h2>
+        </div>
+        <div id="courseGrid" class="course-grid"></div>
+      </section>
+
+      <section id="test" class="page section-wrap">
+        <div class="test-header">
+          <div>
+            <p class="eyebrow">Skill Assessment Test</p>
+            <h2 id="testCourseTitle">Course Test</h2>
+          </div>
+          <div class="timer" id="timer">15:00</div>
+        </div>
+
+        <div class="progress-track">
+          <div id="testProgress" class="progress-fill"></div>
+        </div>
+
+        <div class="question-card">
+          <p id="questionCounter"></p>
+          <h3 id="questionText"></h3>
+          <div id="optionsBox" class="options-box"></div>
+          <div class="test-actions">
+            <button id="nextQuestionBtn" class="secondary-btn">Next</button>
+            <button id="submitTestBtn" class="primary-btn">Submit Test</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="learning" class="page section-wrap">
+        <div class="section-title">
+          <p class="eyebrow">AI Learning Path</p>
+          <h2 id="learningTitle">Your personalized path</h2>
+        </div>
+        <div class="learning-layout">
+          <div class="video-box">
+            <iframe
+              id="learningVideo"
+              title="Learning video"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="study-panel">
+            <h3 id="materialTitle"></h3>
+            <p id="materialText"></p>
+            <div id="learningDetails" class="tag-list"></div>
+            <div class="feedback-box" id="feedbackBox"></div>
+            <button class="primary-btn" data-page="dashboard">Open Dashboard</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="page section-wrap">
+        <div class="section-title">
+          <p class="eyebrow">Student Dashboard</p>
+          <h2>Your progress overview</h2>
+        </div>
+        <div id="dashboardContent" class="dashboard-grid"></div>
+      </section>
+
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
