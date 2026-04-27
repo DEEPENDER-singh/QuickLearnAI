@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function attachEvents() {
+  console.log("Attaching frontend events");
   document.querySelectorAll("[data-page]").forEach((button) => {
     button.addEventListener("click", () => showPage(button.dataset.page));
   });
