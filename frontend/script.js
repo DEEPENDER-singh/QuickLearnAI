@@ -47,6 +47,7 @@ async function loadCourses() {
 }
 
 function showPage(pageId) {
+  console.log("Switching to page:", pageId);
   pages.forEach((page) => page.classList.remove("active"));
   document.getElementById(pageId).classList.add("active");
   navMenu.classList.remove("open");
