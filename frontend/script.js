@@ -40,6 +40,7 @@ function attachEvents() {
 }
 
 async function loadCourses() {
+  console.log("Loading courses...");
   const courses = await request("/api/courses");
   appState.courses = courses;
   renderCourses();
