@@ -269,6 +269,7 @@ app.post("/api/submit-test", (req, res) => {
   }
 });
 
+
 app.get("/api/learning-path/:studentId", (req, res) => {
   try {
     const db = readDb();
