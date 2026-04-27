@@ -1,5 +1,8 @@
 # QuickLearn AI
 
+
+QuickLearnAI is an AI-powered learning platform that helps users learn efficiently through smart and adaptive content.
+
 A beginner-friendly student learning website using:
 
 - Frontend: HTML, CSS, JavaScript
