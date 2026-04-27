@@ -176,6 +176,8 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
+// Step 5: Course selection and question APIs
+
 app.get("/api/courses", (req, res) => {
   res.json(courses);
 });
