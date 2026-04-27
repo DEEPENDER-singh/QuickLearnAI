@@ -87,6 +87,7 @@ async function registerStudent(event) {
 }
 
 async function loginStudent(event) {
+  console.log("Student login started");
   event.preventDefault();
 
   const body = {
