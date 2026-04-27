@@ -218,6 +218,8 @@ app.get("/api/questions/:course", (req, res) => {
   res.json(questions);
 });
 
+// Step 6: Test submission and evaluation logic
+
 app.post("/api/submit-test", (req, res) => {
   try {
     const { studentId, course, answers } = req.body;
