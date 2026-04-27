@@ -24,7 +24,14 @@ quicklearn-ai/
   package.json
   .env.example
 ```
+## Installation
 
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/DEEPENDER-singh/QuickLearnAI.git
+cd QuickLearnAI
+npm install
 ## How To Run
 
 1. Install dependencies:
