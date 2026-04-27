@@ -23,3 +23,6 @@ quicklearn-ai/
   server.js
   package.json
   .env.example
+
+  ## Usage
+Run the application using npm start and open it in the browser.
