@@ -1,3 +1,4 @@
+console.log("QuickLearn AI loaded");
 const api = "";
 
 const appState = {
