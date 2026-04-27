@@ -108,6 +108,8 @@ app.post("/api/register", async (req, res) => {
       return res.status(400).json({ message: "Please fill all fields" });
     }
 
+    // Step 3: Local JSON database handling functions
+    
     const db = readDb();
     const existingStudent = db.students.find((student) => student.email === email);
 
