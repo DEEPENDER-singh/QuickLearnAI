@@ -5,6 +5,8 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
 
+// Step 1: Initialize Express server and basic setup
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 const DATA_DIR = path.join(__dirname, "data");
