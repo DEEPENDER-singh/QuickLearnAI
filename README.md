@@ -25,4 +25,4 @@ quicklearn-ai/
   .env.example
 
   ## Usage
-Run the application using npm start and open it in the browser.
+Run the application  using npm start and open it in the browser.
