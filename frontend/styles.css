@@ -44,9 +44,10 @@ button {
 .navbar {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
-  min-height: 72px;
+  min-height: 78px;
   display: flex;
   align-items: center;
+  padding: 0 10px;
   justify-content: space-between;
   gap: 20px;
 }
