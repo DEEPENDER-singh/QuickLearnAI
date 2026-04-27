@@ -85,6 +85,8 @@ const topicQuestions = [
   }
 ];
 
+// Step 2: Configure middleware (CORS, JSON parsing, static files)
+
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend")));
