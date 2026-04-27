@@ -56,6 +56,7 @@ function showPage(pageId) {
 }
 
 function renderCourses() {
+  console.log("Rendering courses");
   const courseGrid = document.getElementById("courseGrid");
   courseGrid.innerHTML = "";
 
